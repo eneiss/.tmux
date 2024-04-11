@@ -365,8 +365,18 @@ tmux_conf_copy_to_os_clipboard=false
 
 
 # -- user customizations -------------------------------------------------------
-
 # this is the place to override or undo settings
+
+# Get rid of C-a secondary binding
+set -gu prefix2
+unbind C-a
+
+# Move from one window to the previous/next with alt+h/l
+bind -n M-h previous-window
+bind -n M-l next-window
+
+# Prevent tmux from delaying esc key
+set -s escape-time 0
 
 # increase history size
 #set -g history-limit 10000
