@@ -378,6 +378,9 @@ bind -n M-l next-window
 # Prevent tmux from delaying esc key
 set -s escape-time 0
 
+# Bind alt-s to synchronize-panes toggle
+bind -n M-s set-window-option synchronize-panes\; display-message "synchronize-panes is now #{?pane_synchronized,on,off}"
+
 # increase history size
 #set -g history-limit 10000
 
