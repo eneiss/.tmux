@@ -375,6 +375,9 @@ unbind C-a
 bind -n M-h previous-window
 bind -n M-l next-window
 
+# Zoom/unzoom with M-z
+bind -n M-z resize-pane -Z
+
 # Prevent tmux from delaying esc key
 set -s escape-time 0
 
