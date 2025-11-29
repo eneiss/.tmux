@@ -374,6 +374,9 @@ unbind C-a
 # Move from one window to the previous/next with alt+h/l
 bind -n M-h previous-window
 bind -n M-l next-window
+# Move to pane up/down with alt+j/k
+bind -n M-j select-pane -D
+bind -n M-k select-pane -U
 
 # Zoom/unzoom with M-z
 bind -n M-z resize-pane -Z
@@ -393,7 +396,7 @@ bind -n M-s set-window-option synchronize-panes\; display-message "synchronize-p
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
 #set -g status-keys vi
-#set -g mode-keys vi
+set -g mode-keys vi
 
 # replace C-b by C-a instead of using both prefixes
 # set -gu prefix2
